@@ -24,7 +24,12 @@ const filename = (ext) => isDev ? `[name].${ext}` : `[name].[contenthash].${ext}
 module.exports = {
 	context: path.resolve(__dirname, 'src'),
 	mode: 'development',
-	entry: './index.js',
+	entry: {
+		index: './index.js',
+		about: './js/about.js',
+		pricing: './js/pricing.js',
+		contact: './js/contact-page.js'
+	},
 	output: {
 		clean: true,
 		filename: `./js/${filename('js')}`,
@@ -58,6 +63,31 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: path.resolve(__dirname, 'src/index.html'),
 			filename: 'index.html',
+			chunks: ['index'],
+			minify: {
+				collapseWhitespace: isProd
+			}
+		}),
+		new HtmlWebpackPlugin({
+			template: path.resolve(__dirname, 'src/html/about.html'),
+			filename: 'about.html',
+			chunks: ['about'],
+			minify: {
+				collapseWhitespace: isProd
+			}
+		}),
+		new HtmlWebpackPlugin({
+			template: path.resolve(__dirname, 'src/html/pricing.html'),
+			filename: 'pricing.html',
+			chunks: ['pricing'],
+			minify: {
+				collapseWhitespace: isProd
+			}
+		}),
+		new HtmlWebpackPlugin({
+			template: path.resolve(__dirname, 'src/html/contact.html'),
+			filename: 'contact.html',
+			chunks: ['contact'],
 			minify: {
 				collapseWhitespace: isProd
 			}
@@ -121,7 +151,7 @@ module.exports = {
 				))
 				//sort:
 				//	function (a, b) {
-				//	return b.localeCompare(a);
+				//	return a.localeCompare(b);
 				//}
 			}),
 		],

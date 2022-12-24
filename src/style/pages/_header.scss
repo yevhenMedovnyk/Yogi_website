@@ -1,0 +1,115 @@
+.header {
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-block: 1.44% 1.52%;
+	}
+
+	&__logo {
+		transition: .3s;
+		&:hover{
+			color: #f28976;
+		}
+	}
+
+	&__menu {}
+
+	&__btns {
+		margin: 0 0.6rem 0 3rem;
+	}
+
+	&__btns-login {
+		font-size: 1.6rem;
+		line-height: calc(25 / 16);
+		font-weight: 600;
+		color: $secondColor;
+		padding: .75em 1em;
+		background-color: transparent;
+		transition: .2s;
+		&:hover{
+			color: $prmtColor;
+		}
+	}
+	&__btns-signUp {
+		font-size: 1.6rem;
+		line-height: calc(25 / 16);
+		font-weight: 600;
+		color: #ffffff;
+		background-color: $secondColor;
+		border-radius: 6px;
+		padding: .75em 2.81em;
+		margin-left: 3rem;
+		transition: .3s;
+		&:hover{
+			background-color: $prmtColor;
+		}
+	}
+}
+.logo {
+	font-weight: 700;
+	font-size: 4.8rem;
+	line-height: calc(72 / 48);
+	letter-spacing: 0.01em;
+	color: $bgColorSecond;
+}
+.menu {
+	display: flex;
+
+	&__list {
+		display: flex;
+		align-items: center;
+		padding-inline: 3rem;
+		flex-wrap: wrap;
+		column-gap: 2.78em;
+		font-size: 1.8rem;
+		font-weight: 600;
+		line-height: calc(27 / 18);
+		letter-spacing: 0.01em;
+		color: $prmtColor;
+
+		
+	}
+
+	&__item {
+		transition: 0.2s;
+		position: relative;
+		&::after{
+			position: absolute;
+			content: '';
+			width: 63%;
+			height: 2px;
+			border-radius: 2px;
+			bottom: -4px;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			background-color: $bgColorSecond;
+			transform: scale(0);
+			transition: 0.2s;
+		}
+		&:hover::after{
+			transform: scale(1);
+		}
+		&:hover{
+			color: $bgColorSecond;
+		}
+	}
+	&__item.active::after{
+		position: absolute;
+		content: '';
+		width: 63%;
+		height: 2px;
+		border-radius: 2px;
+		bottom: -4px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		background-color: $bgColorSecond;
+		transform: scale(1);
+	}
+	&__item.active{
+		color: $bgColorSecond;
+	}
+}

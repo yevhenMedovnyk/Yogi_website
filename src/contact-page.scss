@@ -1,0 +1,138 @@
+@import "./style/global";
+@import "./style/pages/header.scss";
+
+
+.contacts {
+	background-color: $bgColorMain;
+	padding: 7.1rem 0 5.5rem 0;
+
+
+	&__wrapper {
+		display: flex;
+		background-color: #fff;
+		box-shadow: 0px 10px 55px rgba(241, 102, 24, 0.15);
+		border-radius: 15px;
+		align-items: center;
+	}
+
+	&__image {
+		flex: 1 1 100%;
+		max-width: 62.2rem;
+		margin: 2.2rem 2rem;
+		border-radius: 15px;
+		overflow: hidden;
+	}
+
+	&__content {
+		flex: 0 1 100%;
+		max-width: 62.3rem;
+		padding: 2.4% 3.9% 3% 11.4% ;
+	}
+
+	&__content-title {
+		@extend %titleM;
+	}
+
+	&__content-text {
+		color: $prmtColor;
+		margin-bottom: 11.5%;
+	}
+
+	&__from {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__btn {
+		width: 100%;
+		font-size: 1.6rem;
+		line-height: calc(25 / 16);
+		font-weight: 600;
+		padding: 1.5em;
+		justify-content: center;
+	}
+}
+
+.email-form {
+
+	&__title {
+		font-size: 1.6rem;
+		line-height: calc(25 / 16);
+		margin-bottom: 1em;
+		color: rgba(18, 13, 38, 0.5);
+		font-weight: 600;
+	}
+
+	&__input {
+		background-color: $bgColorMain;
+		padding: 1.19em .89em;
+		border-radius: 1rem;
+		font-size: 1.8rem;
+		color: $prmtColor;
+		line-height: calc(25 / 18);
+		font-weight: 500;
+		width: 100%;
+		margin-bottom: 7.5%;
+		border: 1px solid transparent;
+		cursor: pointer;
+		&::placeholder{
+			font-size: 1.8rem;
+			line-height: calc(25 / 18);
+			font-weight: 500;
+			letter-spacing: 0.2em;
+			color: rgba(255, 112, 88, 0.5);
+		}
+		&:focus{
+			border: 1px solid $prmtColor;
+		}
+		&:hover{
+			border: 1px solid $prmtColor;
+		}
+	}
+}
+.text-form {
+
+	&__title {
+		font-size: 1.6rem;
+		font-weight: 600;
+		line-height: calc(25 / 16);
+		margin-bottom: 1em;
+		color: rgba(18, 13, 38, 0.5);
+	}
+
+	&__area {
+		font-size: 1.8rem;
+		font-weight: 500;
+		line-height: calc(25 / 18);
+		border-radius: 1rem;
+		letter-spacing: 0.2em;
+		color: $prmtColor;
+		background-color: $bgColorMain;
+		width: 100%;
+		min-height: 20.6rem;
+		resize: none;
+		padding: 2.4rem 1.8rem;
+		margin-bottom: 9.2%;
+		overflow-y: hidden;
+		border: 1px solid transparent;
+		cursor: pointer;
+		&::placeholder{
+			font-size: 1.8rem;
+			line-height: calc(25 / 18);
+			font-weight: 500;
+			letter-spacing: 0.2em;
+			color: rgba(255, 112, 88, 0.5);
+			width: 300px;
+			height: 300px;
+		}
+		&:focus{
+			border: 1px solid $prmtColor;
+		}
+		&:hover{
+			border: 1px solid $prmtColor;
+		}
+	}
+}
+
+
+@import "./style/pages/footer.scss";

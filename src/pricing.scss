@@ -1,0 +1,118 @@
+@import "./style/global";
+@import "./style/pages/header";
+
+//-------------------solution
+
+.solution {
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		padding: 4.7% 0 18.34% 0;
+		align-items: center;
+	}
+
+	&__content {
+		flex: 0 1 55%;
+		margin-right: 2rem;
+	}
+
+	&__btn {
+		padding: 0.78em 3.333em;
+		margin-bottom: 1.56em;
+	}
+
+	&__title {
+		position: relative;
+		@extend %titleMain;
+		margin-bottom: 0.47em;
+		&::before {
+			z-index: -1;
+			position: absolute;
+			content: "";
+			top: -22rem;
+			left: -28rem;
+			width: 44.9rem;
+			height: 42rem;
+			background: url("./images/header-bottom/spot.png") no-repeat;
+		}
+	}
+
+	&__text {
+		color: $prmtColor;
+		max-width: 28em;
+	}
+
+	&__image {
+		flex: 1 1 45%;
+		max-width: 51rem;
+		border-radius: 1.2rem;
+	}
+}
+//-------------------pricing
+
+@import "./style/pages/pricing-block.scss";
+
+//----------------------choose
+
+.choose {
+	background-color: $bgColorMain;
+	&__wrapper {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 9.3%;
+		&::before {
+			z-index: -1;
+			position: absolute;
+			content: "";
+			top: -27rem;
+			right: -50rem;
+			width: 79.8rem;
+			height: 85rem;
+			background: url("./images/pricing_page/choose/spot.png") no-repeat;
+		}
+	}
+
+	&__title-block {
+	}
+
+	&__title {
+		position: relative;
+		@extend %titleMain;
+		max-width: 68.5%;
+		padding: 0.5em 0 1em 0;
+		&::after {
+			position: absolute;
+			content: "";
+			width: 32.8%;
+			height: 2px;
+			background-color: $prmtColor;
+			bottom: 0;
+			left: 0;
+		}
+	}
+
+	&__content {
+		flex: 0 1 55%;
+		margin-right: 2rem;
+	}
+
+	&__text {
+		max-width: 29em;
+		color: $prmtColor;
+		padding: 2.5em 0 2.5em 0;
+	}
+
+	&__btn {
+		padding: 1.25em 1.333em;
+	}
+
+	&__image {
+		max-width: 51rem;
+		border-radius: 1.2rem;
+		transform: translateY(-6.8rem);
+		overflow: hidden;
+	}
+}
+
+@import "./style/pages/footer";

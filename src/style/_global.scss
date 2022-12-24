@@ -1,0 +1,47 @@
+@import "./reset";
+@import "./vars";
+@import "./extends";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;700&display=swap");
+
+html {
+	font-size: 62.5%;
+}
+body {
+	height: 100%;
+	width: 100%;
+	line-height: 1;
+	font-family: $mainFont;
+	font-size: 2rem;
+	line-height: calc(30 / 20);
+	font-weight: 400;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	overflow: hidden;
+}
+.page {
+	flex: 1 0 auto;
+}
+.container {
+	@extend %container;
+}
+.btn{
+	display: inline-flex;
+	font-weight: 500;
+	font-size: 1.8rem;
+	line-height: calc(25 / 18);
+	color: white;
+	background-color: $bgColorSecond;
+	letter-spacing: 0.01em;
+	border-radius: 1.5rem;
+	transition: .3s;
+	&:hover{
+		background-color: #f78470;
+	}
+}

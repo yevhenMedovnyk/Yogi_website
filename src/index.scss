@@ -1,7 +1,166 @@
-@import "./style/vars";
-@import "./style/extends";
-@import "./style/reset";
+@import "./style/global.scss";
 
-html{
-	font-size: 62.5%;
+//------------------------header
+
+@import "./style/pages/header.scss";
+
+//-----------------MAIN
+
+//-----------------header-bottom
+.header {
+	&__bottom {
+		
+	}
+	&__bottom-wrapper {
+		display: flex;
+		justify-content: space-between;
+		padding-block: 4.7rem 8.3rem;
+		align-items: center;
+	}
+
+	&__bottom-content {
+		margin-right: 3rem;
+	}
+
+	&__bottom-title {
+		position: relative;
+		@extend %titleMain;
+		max-width: 7.64em;
+		margin-bottom: 3.3rem;
+		&::before {
+			z-index: -1;
+			position: absolute;
+			content: "";
+			top: -11rem;
+			left: -25rem;
+			width: 44.9rem;
+			height: 42rem;
+			background: url("./images/header-bottom/spot.png") no-repeat;
+		}
+	}
+
+	&__bottom-text {
+		color: $prmtColor;
+		margin-bottom: 5.8rem;
+		max-width: 29.25em;
+	}
+
+	&__bottom-btnWrapper {
+		display: flex;
+		align-items: center;
+		gap: 2.7rem;
+	}
+
+	&__bottom-btn {
+		display: inline-flex;
+		min-width: 23rem;
+		padding: 1.25em 4.58em 1.25em 2.69em;
+		position: relative;
+		&::after {
+			position: absolute;
+			content: "";
+			right: 2.69em;
+			width: 1.333em;
+			height: 1.333em;
+			background: url("./images/header-bottom/Icons/arrow-r.svg") no-repeat center;
+		}
+	}
+
+	&__bottom-image {
+		max-width: 53rem;
+		object-fit: cover;
+		overflow: hidden;
+		border-radius: 12px;
+	}
 }
+.btn {
+	&__info {
+		color: $bgColorSecond;
+		font-size: 1.6rem;
+		line-height: calc(24 / 16);
+		font-weight: 500;
+	}
+}
+//--------------------partners
+.partners {
+	&__wrapper {
+		padding: 2.18% 0 9.18% 0;
+	}
+
+	&__title {
+		text-align: center;
+		font-size: 2.2rem;
+		line-height: calc(34 / 22);
+		font-weight: 500;
+		color: $prmtColor;
+		margin-bottom: 3.89%;
+	}
+
+	&__logo {
+		display: flex;
+		justify-content: space-between;
+		column-gap: 10.66%;
+	}
+
+	&__logo-item {
+	}
+}
+
+//-------------------pricing
+@import "./style/pages/pricing-block.scss";
+
+//--------------------Users
+
+.users {
+	&__title {
+		@extend %titleM;
+		text-align: center;
+		background-color: $bgColorMain;
+		padding: 1em 0.2em 0.75em 0.2em;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+		gap: 4.6rem;
+		padding: 3.8% 0 14.16% 0;
+	}
+
+	&__item {
+		text-align: center;
+		padding: 20.1% 5.04%;
+		box-shadow: 0px 10px 40px rgba(241, 102, 24, 0.15);
+		border-radius: 15px;
+		img {
+			max-width: 15rem;
+		}
+	}
+}
+
+.users-item {
+	&__title {
+		@extend %titleS;
+		margin-bottom: 1.17em;
+	}
+
+	&__text {
+		line-height: calc(27 / 18);
+		color: $prmtColor;
+		margin-bottom: 1.56em;
+	}
+
+	&__stars {
+		margin-bottom: 2.8rem;
+	}
+
+	&__author {
+		font-size: 1.5rem;
+		line-height: calc(22 / 15);
+		font-weight: 500;
+		color: #29253c;
+	}
+}
+
+//--------------------footer
+
+@import "./style/pages/footer.scss";

@@ -1,12 +1,33 @@
 
 //Containers
 %container{
-	width: $container;
+	max-width: $container;
 	padding-inline: 1.5rem;
 	margin-inline: auto;
 }
-%containerL{
-	width: $containerL;
-	padding-inline: 1.5rem;
-	margin-inline: auto;
+%titleMain{
+	font-weight: 700;
+	font-size: 7.2rem;
+	line-height: calc(90 / 72);
+	letter-spacing: 0.01em;
+	color: $secondColor;
+}
+%titleL{
+	font-weight: 700;
+	font-size: 4.8rem;
+	line-height: calc(62 / 48);
+	color: #000000;
+}
+%titleM{
+	font-weight: 700;
+	font-size: 4rem;
+	line-height: calc(60 / 40);
+	letter-spacing: 0.02em;
+	color: $secondColor;
+}
+%titleS{
+	font-weight: 600;
+	font-size: 2.4rem;
+	line-height: calc(36 / 24);
+	color: $secondColor;
 }
