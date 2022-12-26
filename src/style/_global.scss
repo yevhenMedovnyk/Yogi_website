@@ -19,6 +19,9 @@ body {
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
+body.scroll-lock{
+	overflow-y: hidden;
+}
 .wrapper {
 	display: flex;
 	flex-direction: column;

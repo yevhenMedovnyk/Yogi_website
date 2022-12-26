@@ -1,10 +1,19 @@
 .header {
 
 	&__wrapper {
+		position: relative;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		padding-block: 1.44% 1.52%;
+		@media (max-width: 1024px){
+			z-index: 9;
+			position: fixed;
+			height: 8rem;
+			background-color: rgba(255, 255, 255, 0.9);
+			left: -5rem;
+			right: -5rem;
+		}
 	}
 
 	&__logo {
@@ -12,12 +21,21 @@
 		&:hover{
 			color: #f28976;
 		}
+		@media (max-width: 1024px){
+			position: fixed;
+			left: 1.7rem;
+		}
 	}
 
 	&__menu {}
 
 	&__btns {
 		margin: 0 0.6rem 0 3rem;
+		@media (max-width: 1024px){
+			display: flex;
+			flex-direction: column;
+			margin: 0;
+		}
 	}
 
 	&__btns-login {
@@ -30,6 +48,11 @@
 		transition: .2s;
 		&:hover{
 			color: $prmtColor;
+		}
+		@media (max-width: 1024px){
+			margin-bottom: 1.5rem;
+			font-size: 2.5rem;
+
 		}
 	}
 	&__btns-signUp {
@@ -45,17 +68,97 @@
 		&:hover{
 			background-color: $prmtColor;
 		}
+		@media (max-width: 1024px){
+			margin-left: 0;
+			font-size: 2.5rem;
+		}
+
 	}
 }
 .logo {
+	z-index: 999;
 	font-weight: 700;
 	font-size: 4.8rem;
 	line-height: calc(72 / 48);
 	letter-spacing: 0.01em;
 	color: $bgColorSecond;
+	@media(max-width:472px){
+		font-size: 4rem;
+	}
+	@media(max-width:375px){
+		font-size: 3.3rem;
+	}
+
 }
 .menu {
 	display: flex;
+	margin-left: auto;
+
+	@media (max-width: 1024px){
+		z-index: 99;
+		position: fixed;
+		flex-direction: column;
+		align-items: center;
+		background-color: #fff;
+		width: 75%;
+		height: 100%;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		padding: 17% 5% 17% 5%;
+		transition: .3s;
+		transform: translateX(150%);
+	}
+	@media (max-width: 790px){
+		padding-top: 21%;
+	}
+	@media (max-width: 472px){
+		padding-top: 25%;
+	}
+
+	&.active{
+	@media (max-width: 1024px){
+		transform: translateX(0);
+	}
+	@media(max-width:375px){
+		width: 100%;
+	}
+
+	}
+	&__burger{
+		display: none;
+		z-index: 99;
+		width: 3.5rem;
+		height: 2.2rem;
+		position: relative;
+			&::before,
+			&::after,
+			span{
+				position: absolute;
+				content: '';
+				height: 2px;
+				width: 100%;
+				background-color: $secondColor;
+				border-radius: 1px;
+			}
+			&::before{
+				top: 0;
+			}
+			&::after{
+				bottom: 0;
+			}
+			span{
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+		@media (max-width: 1024px){
+			display: block;
+			position: fixed;
+			right: 1.7rem;
+		}
+	}
+
 
 	&__list {
 		display: flex;
@@ -68,6 +171,11 @@
 		line-height: calc(27 / 18);
 		letter-spacing: 0.01em;
 		color: $prmtColor;
+		@media (max-width: 1024px){
+			flex-direction: column;
+			margin-bottom: 2em;
+			padding: 0;
+		}
 
 		
 	}
@@ -95,6 +203,12 @@
 		&:hover{
 			color: $bgColorSecond;
 		}
+		@media (max-width: 1024px){
+			font-size: 3rem;
+			margin-bottom: 0.5em;
+
+		}
+
 	}
 	&__item.active::after{
 		position: absolute;
@@ -111,5 +225,20 @@
 	}
 	&__item.active{
 		color: $bgColorSecond;
+	}
+}
+.burger-wrapper.active{
+	z-index: 2;
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(255, 112, 88, 0.07);
+	transition: .3s;
+
+	@media (max-width: 1024px){
+		display: block;
 	}
 }

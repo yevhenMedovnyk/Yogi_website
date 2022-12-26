@@ -15,6 +15,10 @@
 	&__subtitle {
 		max-width: 128.5rem;
 		margin: 0 auto;
+		@media (max-width: 472px){
+			font-size: 1.6rem;			
+		}
+
 	}
 
 	&__offers {
@@ -24,6 +28,9 @@
 		//display: flex;
 		//justify-content: space-between;
 		gap: 4.6rem;
+		@media(max-width:472px){
+			grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+		}
 	}
 }
 .offers {
@@ -32,6 +39,10 @@
 		border-radius: 15px;
 		padding: 8.84% 13.13%;
 		height: max-content;
+		@media (max-width: 472px){
+			padding: 6.84% 8.13%;
+		}
+
 	}
 
 	&__item-price {
@@ -54,6 +65,10 @@
 		color: $bgColorSecond;
 		text-align: center;
 		margin-bottom: 0.61em;
+		@media (max-width: 472px){
+			font-size: 3rem;
+		}
+
 	}
 
 	&__item-subtitle {
@@ -61,6 +76,10 @@
 		color: $prmtColor;
 		padding-bottom: 1.1em;
 		border-bottom: 2px solid #f2f2f2;
+		@media (max-width: 472px){
+			font-size: 1.6rem;
+		}
+
 	}
 
 	&__item-list {
@@ -72,6 +91,10 @@
 		width: 100%;
 		padding: 1.53em;
 		justify-content: center;
+		@media (max-width: 472px){
+			padding: 1.2em;
+		}
+
 	}
 }
 .offers-list {
@@ -89,9 +112,19 @@
 			top: 50%;
 			transform: translateY(-50%);
 			background: url("./images/offers/ellipse.svg") center no-repeat;
+			@media (max-width: 472px){
+				background-size: contain;
+			}
 		}
+		@media (max-width: 472px){
+			font-size: 1.6rem;
+			
+			}
 	}
 	&__item:not(:last-child) {
 		margin-bottom: 1.45em;
+		@media (max-width: 472px){
+			margin-bottom: 1em;
+		}
 	}
 }

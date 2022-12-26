@@ -2,6 +2,10 @@
 	&__wrapper {
 		display: flex;
 		padding: 5.37% 0 7.16% 0;
+		@media(max-width:670px){
+			flex-wrap: wrap;
+			row-gap: 3rem;
+		}
 	}
 
 	&__menu {
@@ -46,6 +50,7 @@
 	}
 
 	&__global {
+		z-index: 10;
 		position: relative;
 		font-size: 1.8rem;
 		max-height: 5.3rem;
@@ -55,8 +60,10 @@
 		color: #29253c;
 		padding: 1.4rem 11.5rem 1.4rem 1.4rem;
 		box-shadow: 0px 10px 20px rgba(241, 102, 24, 0.15);
+		background-color: #fff;
 		border-radius: 8px;
 		cursor: pointer;
+		transition: .3s;
 		&.active::after {
 			transform: rotate(180deg);
 		}
@@ -68,23 +75,30 @@
 			right: 1.4rem;
 			background: url("./images/footer/arrow.svg") no-repeat center;
 		}
+		&.active{
+			box-shadow: none;
+		}
+
 	}
 }
 .footer {
 	&__accordion {
 		margin-left: auto;
+		overflow: hidden;
 	}
 
 	&__global-list {
-		height: 0;
-		overflow: hidden;
-		visibility: hidden;
+		//height: 0;
+		transform: translateY(-110%);
+		//visibility: hidden;
 		padding: 3rem 1.4rem 1.4rem 1.4rem;
 		transition: 0.2s linear;
 		&.active {
-			height: 100%;
-			visibility: visible;
+			//height: 100%;
+			//visibility: visible;
+			transform: translateY(0);
 		}
+		
 	}
 
 	&__global-item {

@@ -5,6 +5,10 @@
 .contacts {
 	background-color: $bgColorMain;
 	padding: 7.1rem 0 5.5rem 0;
+	@media (max-width: 1024px){
+		padding: 15.5rem 0 5.5rem 0;
+	}
+
 
 
 	&__wrapper {
@@ -113,7 +117,7 @@
 		resize: none;
 		padding: 2.4rem 1.8rem;
 		margin-bottom: 9.2%;
-		overflow-y: hidden;
+		overflow: hidden;
 		border: 1px solid transparent;
 		cursor: pointer;
 		&::placeholder{

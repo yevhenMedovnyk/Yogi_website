@@ -9,6 +9,10 @@
 		justify-content: space-between;
 		padding: 3.2% 0 6.4% 0;
 		align-items: center;
+		@media (max-width: 1024px){
+			padding: 12% 0 6.4% 0;
+		}
+
 	}
 
 	&__content {
