@@ -1,0 +1,253 @@
+//login popup
+
+.login-popup {
+	z-index: 999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10%;
+	background-color: rgba(218, 107, 88, 1);
+	transform: translateX(120%);
+	transition: .3s;
+	@media(max-width: 940px){
+		padding-top: 20%;
+	}
+	@media(max-width: 790px){
+		padding-inline: 5%;
+	}
+	@media(max-width: 670px){
+		padding-top: 25%;
+	}
+
+
+
+	&.active {
+		transform: translateX(0);
+		background-color: rgb(214, 172, 165, .6);
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: 70rem;
+		width: 100%;
+		background-color: rgba(208, 124, 109, 1);
+		border-radius: 15px;
+		padding: 2%;
+		
+	}
+
+	&__email {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		font-size: 3rem;
+		padding: 0.5em;
+		border-radius: 15px;
+		margin-bottom: 0.6em;
+		&::placeholder{
+			font-size: 2.3rem;
+			@media(max-width: 472px){
+				font-size: 1.6rem;
+			}	
+		}
+		@media(max-width: 472px){
+			font-size: 1.6rem;
+		}	
+		
+
+	}
+
+	&__password {
+		width: 100%;
+		font-size: 3rem;
+		padding: 0.5em;
+		border-radius: 15px;
+		margin-bottom: 0.6em;
+		&::placeholder{
+			font-size: 2.3rem;
+			@media(max-width: 472px){
+				font-size: 1.6rem;
+			}
+		}
+		@media(max-width: 472px){
+			font-size: 1.6rem;
+		}
+	}
+
+	&__password-rem {
+		display: flex;
+		align-self: start;
+		gap: 1em;
+		padding-left: 2em;
+		margin-bottom: 5%;
+		a {
+			color: #fff;
+		}
+		@media(max-width: 472px){
+			font-size: 1.4rem;
+		}
+	}
+
+	&__login-btn {
+		padding: 1em;
+		width: 60%;
+		justify-content: center;
+		background-color: $secondColor;
+		margin-bottom: 5%;
+		&:hover {
+			background-color: #373052;
+		}
+		@media(max-width: 472px){
+			padding: 0.7em;
+		}
+	}
+	&__close{
+		width: 5rem;
+		height: 5rem;
+		margin: 0 0 4% auto;
+		cursor: pointer;
+		border-radius: 50%;
+		@media(max-width: 940px){
+			width: 4rem;
+			height: 4rem;
+		}
+		@media(max-width: 472px){
+			width: 3rem;
+			height: 3rem;
+		}
+	}
+}
+
+//signUp popup
+
+.signUp-popup {
+	z-index: 999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10%;
+	background-color: rgba(218, 107, 88, 1);
+	transform: translateX(120%);
+	transition: .3s;
+	@media(max-width: 940px){
+		padding-top: 20%;
+	}
+	@media(max-width: 790px){
+		padding-inline: 5%;
+	}
+	@media(max-width: 670px){
+		padding-top: 25%;
+	}
+
+
+
+	&.active {
+		transform: translateX(0);
+		background-color: rgb(214, 172, 165, .6);
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: 70rem;
+		width: 100%;
+		background-color: rgba(208, 124, 109, 1);
+		border-radius: 15px;
+		padding: 2%;
+		
+	}
+
+	&__email {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		font-size: 3rem;
+		padding: 0.5em;
+		border-radius: 15px;
+		margin-bottom: 0.6em;
+		&::placeholder{
+			font-size: 2.3rem;
+			@media(max-width: 472px){
+				font-size: 1.6rem;
+			}	
+		}
+		@media(max-width: 472px){
+			font-size: 1.6rem;
+		}	
+		
+
+	}
+
+	&__password {
+		width: 100%;
+		font-size: 3rem;
+		padding: 0.5em;
+		border-radius: 15px;
+		margin-bottom: 0.6em;
+		&::placeholder{
+			font-size: 2.3rem;
+			@media(max-width: 472px){
+				font-size: 1.6rem;
+			}
+		}
+		@media(max-width: 472px){
+			font-size: 1.6rem;
+		}
+	}
+
+	&__password-rem {
+		display: flex;
+		align-self: start;
+		gap: 1em;
+		padding-left: 2em;
+		margin-bottom: 5%;
+		a {
+			color: #fff;
+		}
+		@media(max-width: 472px){
+			font-size: 1.4rem;
+		}
+	}
+
+	&__signUp-btn {
+		padding: 1em;
+		width: 60%;
+		justify-content: center;
+		background-color: $secondColor;
+		margin-bottom: 5%;
+		&:hover {
+			background-color: #373052;
+		}
+		@media(max-width: 472px){
+			padding: 0.7em;
+		}
+	}
+	&__close{
+		width: 5rem;
+		height: 5rem;
+		margin: 0 0 4% auto;
+		cursor: pointer;
+		border-radius: 50%;
+		@media(max-width: 940px){
+			width: 4rem;
+			height: 4rem;
+		}
+		@media(max-width: 472px){
+			width: 3rem;
+			height: 3rem;
+		}
+	}
+}

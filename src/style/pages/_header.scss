@@ -66,7 +66,8 @@
 		margin-left: 3rem;
 		transition: .3s;
 		&:hover{
-			background-color: $prmtColor;
+			background-color: #373052;
+
 		}
 		@media (max-width: 1024px){
 			margin-left: 0;
@@ -108,20 +109,21 @@
 		padding: 17% 5% 17% 5%;
 		transition: .3s;
 		transform: translateX(150%);
+		overflow: auto;
+
 	}
 	@media (max-width: 790px){
 		padding-top: 21%;
 	}
 	@media (max-width: 472px){
 		padding-top: 25%;
+		width: 100%;
+
 	}
 
 	&.active{
 	@media (max-width: 1024px){
 		transform: translateX(0);
-	}
-	@media(max-width:375px){
-		width: 100%;
 	}
 
 	}

@@ -1,6 +1,4 @@
 @import "./style/global";
-@import "./style/pages/header.scss";
-
 
 .contacts {
 	background-color: $bgColorMain;
@@ -8,6 +6,7 @@
 	@media (max-width: 1024px){
 		padding: 15.5rem 0 5.5rem 0;
 	}
+	
 
 
 
@@ -17,6 +16,12 @@
 		box-shadow: 0px 10px 55px rgba(241, 102, 24, 0.15);
 		border-radius: 15px;
 		align-items: center;
+		@media (max-width: 790px){
+			flex-direction: column-reverse;
+			gap: 3rem;
+			align-items: start;
+			padding: 10rem 0 0 4rem;
+		}
 	}
 
 	&__image {
@@ -25,12 +30,20 @@
 		margin: 2.2rem 2rem;
 		border-radius: 15px;
 		overflow: hidden;
+		@media (max-width: 790px){
+			margin: 0 4rem 0 0;
+		}
+
 	}
 
 	&__content {
 		flex: 0 1 100%;
 		max-width: 62.3rem;
 		padding: 2.4% 3.9% 3% 11.4% ;
+		@media (max-width: 790px){
+			padding: 0;
+		}
+
 	}
 
 	&__content-title {
@@ -137,6 +150,3 @@
 		}
 	}
 }
-
-
-@import "./style/pages/footer.scss";

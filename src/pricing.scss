@@ -1,5 +1,4 @@
 @import "./style/global";
-@import "./style/pages/header";
 
 //-------------------solution
 
@@ -10,8 +9,15 @@
 		padding: 4.7% 0 18.34% 0;
 		align-items: center;
 		@media (max-width: 1024px){
-			padding: 13% 0 18.34% 0;
-
+			padding: 15% 0 18.34% 0;
+		}
+		@media (max-width: 790px){
+			flex-direction: column;
+			row-gap: 3rem;
+			padding-top: 16rem;
+		}
+		@media (max-width: 472px){
+			row-gap: 1.8rem;
 		}
 
 	}
@@ -19,11 +25,19 @@
 	&__content {
 		flex: 0 1 55%;
 		margin-right: 2rem;
+		@media (max-width: 790px){
+			margin-right: 0;
+			text-align: center;
+		}
+
 	}
 
 	&__btn {
 		padding: 0.78em 3.333em;
 		margin-bottom: 1.56em;
+		@media (max-width: 940px){
+			font-size: 1.5rem;
+		}
 	}
 
 	&__title {
@@ -40,11 +54,27 @@
 			height: 42rem;
 			background: url("./images/header-bottom/spot.png") no-repeat;
 		}
+		@media (max-width: 790px){
+			text-align: center;
+		}
 	}
 
 	&__text {
 		color: $prmtColor;
 		max-width: 28em;
+		@media (max-width: 940px){
+			font-size: 1.8rem;
+		}
+		@media (max-width: 790px){
+			text-align: center;
+			margin: 0 auto;
+		}
+		@media (max-width: 472px){
+			font-size: 1.6rem;
+		}
+		@media (max-width: 375px){
+			font-size: 1.4rem;
+		}
 	}
 
 	&__image {
@@ -76,6 +106,10 @@
 			height: 85rem;
 			background: url("./images/pricing_page/choose/spot.png") no-repeat;
 		}
+		@media(max-width:790px){
+			flex-direction: column;
+			gap: 3rem;
+		}
 	}
 
 	&__title-block {
@@ -94,18 +128,47 @@
 			background-color: $prmtColor;
 			bottom: 0;
 			left: 0;
+			@media(max-width:790px){
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+			}
+
 		}
+		@media(max-width:790px){
+			text-align: center;
+			margin: 0 auto;
+			max-width: 100%;
+		}
+		@media(max-width:375px){
+			font-size: 3.2rem;
+		}
+
 	}
 
 	&__content {
 		flex: 0 1 55%;
 		margin-right: 2rem;
+		@media(max-width:790px){
+			text-align: center;
+			margin: 0 auto;
+		}
+
 	}
 
 	&__text {
 		max-width: 29em;
 		color: $prmtColor;
 		padding: 2.5em 0 2.5em 0;
+		@media (max-width: 940px){
+			font-size: 1.8rem;
+		}
+		@media (max-width: 472px){
+			font-size: 1.6rem;
+		}
+		@media (max-width: 375px){
+			font-size: 1.4rem;
+		}
 	}
 
 	&__btn {
@@ -117,7 +180,10 @@
 		border-radius: 1.2rem;
 		transform: translateY(-6.8rem);
 		overflow: hidden;
+		@media(max-width:790px){
+			transform: translateY(0);
+			margin: 0 auto;
+		}
+
 	}
 }
-
-@import "./style/pages/footer";

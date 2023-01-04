@@ -1,8 +1,10 @@
 @import "./style/global.scss";
 
-//------------------------header
 
-@import "./style/pages/header.scss";
+//popup
+
+
+
 
 //-----------------MAIN
 
@@ -23,7 +25,6 @@
 		@media (max-width: 790px){
 			flex-direction: column;
 			row-gap: 3rem;
-
 		}
 		@media (max-width: 472px){
 			row-gap: 1.8rem;
@@ -54,20 +55,9 @@
 			height: 42rem;
 			background: url("./images/header-bottom/spot.png") no-repeat;
 		}
-		@media (max-width: 940px){
-			font-size: 6rem;
-		}
 		@media (max-width: 790px){
 			margin-inline: auto;
 		}
-		@media (max-width: 472px){
-			font-size: 4.5rem;
-		}
-		@media (max-width: 375px){
-			font-size: 4rem;
-		}
-
-		
 	}
 
 	&__bottom-text {
@@ -232,4 +222,3 @@
 
 //--------------------footer
 
-@import "./style/pages/footer.scss";

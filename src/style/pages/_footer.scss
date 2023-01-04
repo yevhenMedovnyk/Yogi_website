@@ -2,7 +2,7 @@
 	&__wrapper {
 		display: flex;
 		padding: 5.37% 0 7.16% 0;
-		@media(max-width:670px){
+		@media (max-width: 670px) {
 			flex-wrap: wrap;
 			row-gap: 3rem;
 		}
@@ -50,7 +50,7 @@
 	}
 
 	&__global {
-		z-index: 10;
+		z-index: 1;
 		position: relative;
 		font-size: 1.8rem;
 		max-height: 5.3rem;
@@ -63,7 +63,7 @@
 		background-color: #fff;
 		border-radius: 8px;
 		cursor: pointer;
-		transition: .3s;
+		transition: 0.3s;
 		&.active::after {
 			transform: rotate(180deg);
 		}
@@ -75,10 +75,9 @@
 			right: 1.4rem;
 			background: url("./images/footer/arrow.svg") no-repeat center;
 		}
-		&.active{
+		&.active {
 			box-shadow: none;
 		}
-
 	}
 }
 .footer {
@@ -88,17 +87,12 @@
 	}
 
 	&__global-list {
-		//height: 0;
-		transform: translateY(-110%);
-		//visibility: hidden;
+		transform: translateY(-100%);
 		padding: 3rem 1.4rem 1.4rem 1.4rem;
 		transition: 0.2s linear;
 		&.active {
-			//height: 100%;
-			//visibility: visible;
 			transform: translateY(0);
 		}
-		
 	}
 
 	&__global-item {

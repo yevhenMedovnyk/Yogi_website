@@ -11,6 +11,18 @@
 	line-height: calc(90 / 72);
 	letter-spacing: 0.01em;
 	color: $secondColor;
+	@media (max-width: 940px){
+		font-size: 6rem;
+	}
+	@media (max-width: 670px){
+		font-size: 5.2rem;
+	}
+	@media (max-width: 472px){
+		font-size: 4.5rem;
+	}
+	@media (max-width: 375px){
+		font-size: 4rem;
+	}
 }
 %titleL{
 	font-weight: 700;

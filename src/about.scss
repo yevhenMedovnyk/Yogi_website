@@ -1,5 +1,4 @@
 @import './style/global';
-@import './style/pages/header';
 
 
 .about {
@@ -12,12 +11,21 @@
 		@media (max-width: 1024px){
 			padding: 12% 0 6.4% 0;
 		}
+		@media (max-width: 940px){
+			flex-direction: column;
+			gap: 3rem;
+			padding: 16rem 0 8rem 0;
+		}
 
 	}
 
 	&__content {
 		flex: 1 1 50%;
 		padding-right: 2rem;
+		@media (max-width: 940px){
+			text-align: center;
+		}
+
 	}
 
 	&__title {
@@ -33,6 +41,7 @@
 			width: 44.9rem;
 			height: 42rem;
 			background: url("./images/header-bottom/spot.png") no-repeat;
+			
 		}
 	}
 
@@ -40,10 +49,20 @@
 		color: $prmtColor;
 		margin-bottom: 1em;
 		max-width: 27.5em;
+		@media (max-width: 940px){
+			font-size: 1.8rem;
+		}
+		@media (max-width: 472px){
+			font-size: 1.6rem;
+		}
 	}
 
 	&__btn {
 		padding: 1.25em 2.17em ;
+		@media (max-width: 472px){
+			font-size: 1.6rem;
+		}
+
 	}
 	&__image{
 		position: relative;
@@ -55,6 +74,9 @@
 			background: url('./images/about-page/top/points.png') no-repeat;
 			bottom: -3.6rem;
 			left: -4.5rem;
+			@media (max-width: 790px){
+				display: none;
+			}
 		}
 	}
 	&__image-wrapper {
@@ -69,10 +91,12 @@
 
 .happening {
 	background-color: $bgColorMain;
+	@media(max-width:940px){
+		margin-bottom: 10rem;
+	}
 
 	&__wrapper{
 		padding: 4.7% 0 8.9% 0;
-
 	}
 
 	&__title {
@@ -111,18 +135,24 @@
 		font-weight: 600;
 		color: $secondColor;
 		margin-bottom: 0.333em;
+		@media(max-width:472px){
+			font-size: 2.8rem;
+		}
+
 	}
 
 	&__text {
 		color: #3C3E56;
 		margin-bottom: 2.5em;
+		@media(max-width:472px){
+			font-size: 1.8rem;
+		}
 	}
 
-	&__date {}
+	&__date {
+		@media(max-width:472px){
+			font-size: 1.6rem;
+		}
+	}
 }
-
-
-
-
-@import './style/pages/footer';
 
