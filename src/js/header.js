@@ -11,24 +11,26 @@ burgerBtn.addEventListener('click', (e) => {
 		closeMenu();
 	}
 	else {
-		openMenu()							
+		openMenu()
 	}
 })
 
 burgerWrapper.addEventListener('click', () => {
 	closeMenu();
-	
+
 })
 
 
 const openMenu = () => {
 	burgerMenu.classList.add('active');
+	burgerBtn.classList.add('active');
 	burgerWrapper.classList.add('active');
 	body.classList.add('scroll-lock');
 }
 
 const closeMenu = () => {
 	burgerMenu.classList.remove('active');
+	burgerBtn.classList.remove('active');
 	burgerWrapper.classList.remove('active');
 	body.classList.remove('scroll-lock');
 }

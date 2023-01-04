@@ -142,6 +142,7 @@
 				width: 100%;
 				background-color: $secondColor;
 				border-radius: 1px;
+				transition: .3s;
 			}
 			&::before{
 				top: 0;
@@ -154,10 +155,25 @@
 				transform: translateY(-50%);
 			}
 
+
 		@media (max-width: 1024px){
 			display: block;
 			position: fixed;
 			right: 1.7rem;
+		}
+	}
+	&__burger.active{
+		&::before{
+			transform: rotate(-43deg) ;
+			top: 9px;
+		}
+		&::after{
+			transform: rotate(43deg) ;
+			bottom: 11px;
+
+		}
+		span{
+			opacity: 0;
 		}
 	}
 
